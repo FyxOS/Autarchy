@@ -1,0 +1,84 @@
+{
+  "nodes": {
+    "fyxos": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790983511,
+        "narHash": "sha256-sOBAad1dzhgnDIBFR64jwIP1VDo+6/lGSeEVu/1m6Fc=",
+        "owner": "FyxOS",
+        "repo": "FyxOS",
+        "rev": "80f24a5160496a36576e263997af49bc7e51820d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FyxOS",
+        "repo": "FyxOS",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1790822859,
+        "narHash": "sha256-69xHQhAeMAD2wDXO7T2pcOZIF9Sga2W+JkmY2a11Ops=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "omarchy-latest": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790904845,
+        "narHash": "sha256-pgiltTj1hlgRXq058HlibqHX3QDeIayYzRaRGltcFhU=",
+        "owner": "basecamp",
+        "repo": "omarchy",
+        "rev": "821ae589059ffdadc970315f866c94b55d268af7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "basecamp",
+        "ref": "quattro",
+        "repo": "omarchy",
+        "type": "github"
+      }
+    },
+    "omarchy-stable": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789450452,
+        "narHash": "sha256-nstxM+CP6al2I4N1LAKdYBvJ4tytD1m8jssiCD7PXTY=",
+        "owner": "basecamp",
+        "repo": "omarchy",
+        "rev": "c668141e9c42b13c80c9ca4ea108e11708c5e8a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "basecamp",
+        "ref": "v4.0.4",
+        "repo": "omarchy",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "fyxos": "fyxos",
+        "nixpkgs": "nixpkgs",
+        "omarchy-latest": "omarchy-latest",
+        "omarchy-stable": "omarchy-stable"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

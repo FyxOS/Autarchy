@@ -53,9 +53,27 @@ instead of working around NixOS for every foreign binary.
 
 ## Status
 
-**Planning.** Nothing is usable yet. Autarchy follows Atrium in the FyxOS
-[roadmap](https://github.com/FyxOS/FyxOS/blob/main/docs/roadmap.md) (Phase 4): `stable`
-first, then `latest`.
+**First version.** It is built from Omarchy's own pinned source (`stable` =
+v4.0.4, `latest` = `quattro`):
+
+- **Omarchy's defaults** (`default/`, `themes/`, `bin/`) are read-only in the
+  store at `$OMARCHY_PATH`, where Omarchy's Lua config looks for them.
+- **Each user's `~/.config`** is seeded once from Omarchy's `config/` templates,
+  as Omarchy's installer does.
+- **Hyprland 0.56 runs Omarchy's Lua config unmodified,** under uwsm.
+- **Packages:** 131 of Omarchy's 147 base packages are mapped to nixpkgs
+  (`modules/packages.nix`).
+
+`nix flake check` boots the `stable` variant to a Hyprland session running
+Omarchy's bar and first-run notifications.
+
+Known gaps:
+- Arch-only pieces are not ported: `yay`, `pacman-contrib`, `expac`, and
+  Omarchy's own apps (`omacalc`, `omacut`, `omawrite`, `omarchy-nvim`, `aether`,
+  `herdr`, `tensaku`, ...).
+- Omarchy's "Update System" action is pacman-based. On FyxOS, updating is
+  `nix flake update` plus a rebuild.
+- The first-boot theme does not set a wallpaper yet.
 
 ## Relationship to Omarchy
 
