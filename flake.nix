@@ -28,9 +28,10 @@
       nixosModules.latest = module omarchy-latest;
       nixosModules.default = self.nixosModules.stable;
 
-      checks.${system}.stable = import ./tests/session.nix {
-        pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ fyxos.nixosModules.default self.nixosModules.stable ];
-      };
+      checks.${system} = nixpkgs.lib.genAttrs [ "stable" "latest" ] (variant:
+        import ./tests/session.nix {
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [ fyxos.nixosModules.default self.nixosModules.${variant} ];
+        });
     };
 }
