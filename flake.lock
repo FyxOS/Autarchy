@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "fyxos": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1790983511,
-        "narHash": "sha256-sOBAad1dzhgnDIBFR64jwIP1VDo+6/lGSeEVu/1m6Fc=",
-        "owner": "FyxOS",
-        "repo": "FyxOS",
-        "rev": "80f24a5160496a36576e263997af49bc7e51820d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "FyxOS",
-        "repo": "FyxOS",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1790822859,
@@ -70,12 +50,32 @@
         "type": "github"
       }
     },
+    "omnix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791008905,
+        "narHash": "sha256-CcJdb3rFYywwwFUZ9VYVQSSlIJgT2UpJ8Ribec6WORw=",
+        "owner": "Omnix-Linux",
+        "repo": "Omnix",
+        "rev": "6c184798d4dea4e33f287a75b64e754859537b40",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Omnix-Linux",
+        "repo": "Omnix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "fyxos": "fyxos",
         "nixpkgs": "nixpkgs",
         "omarchy-latest": "omarchy-latest",
-        "omarchy-stable": "omarchy-stable"
+        "omarchy-stable": "omarchy-stable",
+        "omnix": "omnix"
       }
     }
   },

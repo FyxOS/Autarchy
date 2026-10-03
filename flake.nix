@@ -1,10 +1,10 @@
 {
-  description = "Autarchy: Omarchy, ported to FyxOS";
+  description = "Autarchy: Omarchy, ported to Omnix";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    fyxos = {
-      url = "github:FyxOS/FyxOS";
+    omnix = {
+      url = "github:Omnix-Linux/Omnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # stable: a pinned Omarchy release. latest: Omarchy's main branch.
@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, fyxos, omarchy-stable, omarchy-latest }:
+  outputs = { self, nixpkgs, omnix, omarchy-stable, omarchy-latest }:
     let
       system = "x86_64-linux";
       module = import ./modules/autarchy.nix;
@@ -31,7 +31,7 @@
       checks.${system} = nixpkgs.lib.genAttrs [ "stable" "latest" ] (variant:
         import ./tests/session.nix {
           pkgs = nixpkgs.legacyPackages.${system};
-          modules = [ fyxos.nixosModules.default self.nixosModules.${variant} ];
+          modules = [ omnix.nixosModules.default self.nixosModules.${variant} ];
         });
     };
 }

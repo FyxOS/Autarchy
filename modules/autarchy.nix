@@ -1,4 +1,4 @@
-# Autarchy: Omarchy on FyxOS, built from Omarchy's own pinned source.
+# Autarchy: Omarchy on Omnix, built from Omarchy's own pinned source.
 #
 # Omarchy's defaults (default/, themes/, bin/) live read-only in the store at
 # $OMARCHY_PATH, exactly where Omarchy's Lua config looks for them. Each user's
@@ -28,7 +28,7 @@ let
   '';
 in
 {
-  fyx.fhs.presets.desktop = true;
+  omnix.fhs.presets.desktop = true;
 
   programs.hyprland = {
     enable = true;
