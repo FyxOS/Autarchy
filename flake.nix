@@ -1,5 +1,5 @@
 {
-  description = "Autarchy: Omarchy, ported to Omnix";
+  description = "Hyprland - Omarchy: Omarchy, ported to Omnix";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";

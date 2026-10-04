@@ -1,4 +1,4 @@
-# Autarchy: Omarchy on Omnix, built from Omarchy's own pinned source.
+# Hyprland - Omarchy: Omarchy on Omnix, built from Omarchy's own pinned source.
 #
 # Omarchy's defaults (default/, themes/, bin/) live read-only in the store at
 # $OMARCHY_PATH, exactly where Omarchy's Lua config looks for them. Each user's
@@ -23,7 +23,7 @@ let
     # Omarchy's installer: cp -R config/* ~/.config/, without clobbering.
     cp -rn --no-preserve=mode ${omarchyPath}/config/. "$HOME/.config/"
     export OMARCHY_PATH=${omarchyPath} PATH=${omarchyPath}/bin:$PATH
-    omarchy-theme-set tokyo-night || echo "autarchy: theme not applied yet" >&2
+    omarchy-theme-set tokyo-night || echo "omarchy: theme not applied yet" >&2
     touch "$marker"
   '';
 in
