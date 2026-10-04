@@ -1,11 +1,13 @@
-# Autarchy
+# Hyprland - Omarchy
 
 **[Omarchy](https://omarchy.org), ported to [Omnix](https://github.com/Omnix-Linux/Omnix).**
 
 Omarchy is an opinionated Arch Linux and Hyprland desktop: a curated set of tools,
-keybindings, themes, and configuration that installs onto Arch with a script. Autarchy
-brings that experience to Omnix as a flavor. Pick it in the Omnix installer, and the
+keybindings, themes, and configuration that installs onto Arch with a script. This flavor
+brings that experience to Omnix. Pick it in the Omnix installer, and the
 whole desktop is reproducible and rolls back with the rest of the system.
+
+Desktop labels follow the [Omnix naming policy](https://github.com/Omnix-Linux/Omnix/blob/main/docs/naming.md).
 
 ## Variants
 
@@ -25,18 +27,18 @@ inputs.flavor = {
 
 ## Why it exists: the proof
 
-Autarchy is also Omnix's reproducibility test. Omarchy is a public reference that Omnix
+This port is also Omnix's reproducibility test. Omarchy is a public reference that Omnix
 does not control. It is a script-driven install that assumes Arch, a standard Linux
 layout, and prebuilt binaries, which is the hardest case for NixOS. If both variants
 install cleanly from the Omnix ISO, with nothing built locally, the ecosystem has shown
 it can reproduce a curated desktop. Every Omarchy feature that needs a workaround
-becomes a Omnix bug report.
+becomes an Omnix bug report.
 
 ## Why Omnix
 
 Omarchy assumes a conventional Linux layout, and so do many of the prebuilt apps and
 tools it ships with. Omnix provides that layout (`/usr/lib`, `/lib64/ld-linux…`) on top of
-nixpkgs and `cache.nixos.org`. Autarchy can therefore port Omarchy's setup faithfully
+nixpkgs and `cache.nixos.org`. This flavor can therefore reproduce Omarchy's setup faithfully
 instead of working around NixOS for every foreign binary.
 
 ## Goals
@@ -77,6 +79,6 @@ Known gaps:
 
 ## Relationship to Omarchy
 
-Autarchy is an independent port. It is not affiliated with or endorsed by the Omarchy
+This is an independent port of Omarchy. It is not affiliated with or endorsed by the Omarchy
 project or Basecamp. Credit for the desktop's design belongs to Omarchy and its
 contributors.

@@ -1,4 +1,4 @@
-# Boots Autarchy (stable) to a Hyprland session and checks that Omarchy's own
+# Boots Hyprland - Omarchy (stable) to a Hyprland session and checks that Omarchy's own
 # config is what Hyprland loaded.
 { pkgs, modules }:
 pkgs.testers.runNixOSTest {
