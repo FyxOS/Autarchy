@@ -1,3 +1,5 @@
+<img src=".github/assets/icon.png" alt="" width="96">
+
 # Hyprland - Omarchy
 
 **[Omarchy](https://omarchy.org), ported to [Omnix](https://github.com/Omnix-Linux/Omnix).**
